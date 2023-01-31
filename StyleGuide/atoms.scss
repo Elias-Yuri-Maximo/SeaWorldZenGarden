@@ -1,0 +1,160 @@
+@use "variables" as *;
+
+//H1 style
+@mixin shape-title($margin, $font-family) {
+  margin: $margin;
+  font-family: $font-family;
+}
+
+h1 {
+  @include shape-title(0.67em 0, ($branch-font-style));
+  padding-left: 4%;
+  color: $red-header-color;
+}
+
+//H2 style
+h2 {
+  @include shape-title(5%, ($headings-font-style));
+}
+
+//P style
+p {
+  font-family: $content-font-style;
+  margin-top: 20px;
+}
+
+.branch {
+  font-family: $branch-font-style;
+}
+@mixin h2($font-family) {
+  margin: 5%;
+  font-family: $headings-font-style;
+}
+.headings {
+  @include h2($headings-font-style)
+}
+p {
+  font-family: $content-font-style;
+  margin-top: 20px;
+}
+.contact h1 {
+  font-size: 40px;
+}
+.contact h2 {
+  margin: 30px;
+  font-size: 40px;
+}
+//Images
+
+.gelly {
+  width: 100px;
+  transition: 0.5s;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.cont a img {
+  max-width: 300px;
+  transition: 0.5s;
+  margin-top: 20px;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: $box-shadow-margin;
+  }
+}
+
+.cont img {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+.color-scheme img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: $border-radius-px;
+}
+
+header img {
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  transition: 0.5s;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.contact img {
+  width: 130px;
+  border-radius: 150px;
+  margin: 30px;
+
+  transition: 0.3s;
+  overflow: hidden;
+  &:hover {
+    transform: scale(1.2);
+    overflow: hidden;
+  }
+}
+//a Style
+a {
+  color: #14213d;
+  text-decoration: none;
+  font-family: $motto-font-style;
+}
+a:hover {
+  color: #ff4a1c;
+}
+// header-------------------------------------
+
+header {
+  background-color: rgb(168, 218, 220, 0.4);
+  color: #e63946;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.motto {
+  font-family: $motto-font-style;
+  margin-left: 15px;
+  font-size: 1rem;
+  letter-spacing: 3pt;
+  color: #457b9d;
+}
+//main----------------------
+main {
+  max-width: 800px;
+  font-size: 18px;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+// article--------------
+.article {
+  max-width: 800px;
+  margin: 10px auto;
+  background-color: $blue-background;
+  border-radius: 3px;
+  padding: 5%;
+}
+
+.article h2 {
+  margin: 0 auto;
+  padding: 5px;
+}
+.hover:hover {
+  background-color: $hover-background-color;
+  color: white;
+}
+.hover {
+  padding: 10px;
+}
+.hover a:hover {
+  color: #0eabf3;
+}
+
+//-------------------------------MID ATTOMS-------------
